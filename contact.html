@@ -11,19 +11,60 @@
 </head>
 
 <body>
+    <!-- Floating Hearts -->
+    <div class="floating-hearts"></div>
+
+    <!-- Particles Background -->
+    <div class="particles"></div>
+
     <div class="container">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">Thông tin</a>
             <a href="contact.html">Liên hệ</a>
         </nav>
-        <h1>Liên hệ với Cẩm Giang</h1>
+        <h1>💌 Gửi Lời Yêu Thương Đến Em 💌</h1>
+
+        <!-- Love Message Generator -->
+        <div class="love-generator">
+            <h3>💝 Tạo Lời Nhắn Ngọt Ngào</h3>
+            <button id="generateMessage" class="generate-btn">✨ Tạo lời yêu thương ✨</button>
+            <div id="generatedMessage" class="generated-message"></div>
+        </div>
+
         <form class="contact-form">
-            <input type="text" name="name" placeholder="Tên của bạn" required>
-            <input type="email" name="email" placeholder="Email của bạn" required>
-            <textarea name="message" rows="4" placeholder="Lời nhắn gửi đến Cẩm Giang..." required></textarea>
-            <button type="submit">Gửi 💌</button>
+            <div class="form-header">
+                <h3>💕 Viết thư cho Cẩm Giang 💕</h3>
+                <p>Hãy để lại lời nhắn ngọt ngào cho cô ấy nhé!</p>
+            </div>
+            <input type="text" name="name" placeholder="Tên của bạn ✍️" required>
+            <input type="email" name="email" placeholder="Email của bạn 📧" required>
+            <textarea name="message" rows="5"
+                placeholder="Lời nhắn gửi đến Cẩm Giang... 💖&#10;&#10;Ví dụ: Em xinh đẹp quá! Chúc em luôn vui vẻ và hạnh phúc!"
+                required></textarea>
+            <button type="submit">🚀 Gửi Tình Yêu 🚀</button>
         </form>
+
+        <!-- Hidden Love Letters -->
+        <div class="hidden-letters">
+            <h3>💌 Thư Tình Bí Mật</h3>
+            <p>Click vào các trái tim để mở những lá thư tình đặc biệt!</p>
+            <div class="letter-hearts">
+                <div class="secret-heart" data-letter="0">💖</div>
+                <div class="secret-heart" data-letter="1">💕</div>
+                <div class="secret-heart" data-letter="2">💗</div>
+                <div class="secret-heart" data-letter="3">💘</div>
+                <div class="secret-heart" data-letter="4">💝</div>
+            </div>
+        </div>
+
+        <!-- Secret Letter Modal -->
+        <div id="letterModal" class="letter-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="letterContent" class="secret-letter-content"></div>
+            </div>
+        </div>
         <div class="social" style="margin-top:2em;">
             <a href="https://www.facebook.com/ng.t.cam.giang.389323" target="_blank">Facebook</a>
             <a href="https://www.instagram.com/766wak?fbclid=IwY2xjawMAPnBleHRuA2FlbQIxMABicmlkETFhZFZIeFZjWXc2aHJsWlBoAR6CrI6vQfLLkBJPck9wvtu-V_D1iGs-fzvnWDoar6vfnfyms74fMMNwbBGPnQ_aem_h2Q5HSBD31rrUHhjv_8tcQ"
