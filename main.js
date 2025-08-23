@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
 // ================ FRIENDSHIP COUNTER ================
 // Ngày bắt đầu quen nhau (bạn có thể thay đổi ngày này)
 // Format: 'YYYY-MM-DD' - Ví dụ: '2024-03-15' cho ngày 15 tháng 3 năm 2024
-const friendshipStartDate = new Date('2024-01-01T00:00:00'); // ⚠️ THAY ĐỔI NGÀY NÀY THEO THỰC TẾ!
+const friendshipStartDate = new Date('2025-06-22T00:00:00'); // 22/6/2025 - Ngày quen biết Cẩm Giang
 
 function updateLoveCounter() {
     const now = new Date();

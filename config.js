@@ -7,7 +7,7 @@ const WEBSITE_CONFIG = {
     RELATIONSHIP: "Người quan trọng nhất trong cuộc đời anh",
 
     // Ngày bắt đầu quen biết (Format: YYYY-MM-DD)
-    FRIENDSHIP_START_DATE: "2024-01-01", // ⚠️ THAY ĐỔI NGÀY NÀY!
+    FRIENDSHIP_START_DATE: "2025-06-22", // 22/6/2025 - Ngày quen biết Cẩm Giang
 
     // Counter labels
     COUNTER_TITLE: "💕 Chúng ta đã quen biết nhau được 💕",
