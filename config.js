@@ -86,18 +86,106 @@ const WEBSITE_CONFIG = {
         }
     ],
 
-    // Photo captions
-    PHOTO_CAPTIONS: [
-        "Em xinh như thiên thần 👼",
-        "Nụ cười tỏa nắng của em ☀️",
-        "Em đẹp trong mọi khoảnh khắc 💫",
-        "Cô gái đặc biệt của anh thật dễ thương 🥰",
-        "Em là điều tuyệt vời nhất ✨",
-        "Mãi mãi trân trọng em 💕",
-        "Em là tất cả của anh 💖",
-        "Ấn tượng từ cái nhìn đầu tiên 💘",
-        "Đôi mắt em đẹp nhất thế gian 👀"
+        // Slideshow images
+    SLIDESHOW_IMAGES: [
+        {
+            src: "public/imgs/9.jpg",
+            caption: "Em xinh như thiên thần 👼"
+        },
+        {
+            src: "public/imgs/z6917564606436_ddb9a9d4f523635a8d0f9db659fe24ef.jpg",
+            caption: "Nụ cười tỏa nắng của em ☀️"
+        },
+        {
+            src: "public/imgs/z6917564611811_0ef63083774e61aee98847fb8822ab89.jpg",
+            caption: "Em đẹp trong mọi khoảnh khắc 💫"
+        },
+        {
+            src: "public/imgs/z6920674832264_2b4264f364d4196c86189908e8515ba0.jpg",
+            caption: "Cô gái đặc biệt của anh thật dễ thương 🥰"
+        },
+        {
+            src: "public/imgs/z6920674885018_2a12481a6524fbc0a3815f1816e0154b.jpg",
+            caption: "Em là điều tuyệt vời nhất ✨"
+        },
+        {
+            src: "public/imgs/z6921070318196_f7d356b6a5d1031e834008b5e9122369.jpg",
+            caption: "Mãi mãi trân trọng em 💕"
+        },
+        {
+            src: "public/imgs/z6921070318995_b403bcabcc32e9409d0f92bd1150e40c.jpg",
+            caption: "Em là ánh sáng cuộc đời anh 💖"
+        },
+        {
+            src: "public/imgs/z6936851678160_f02bbe831160cb92e66b19592051a58f.jpg",
+            caption: "Ấn tượng từ cái nhìn đầu tiên 💘"
+        },
+        {
+            src: "public/imgs/z6937068839608_231c7425f4f1d6c7977b4f6e1b54d74b.jpg",
+            caption: "Đôi mắt em đẹp nhất thế gian 👀"
+        },
+        {
+            src: "public/imgs/z6937842948883_9847eed10b60ca9257ccbe704bf2ac15.jpg",
+            caption: "Em luôn xinh đẹp trong mắt anh ✨"
+        },
+        {
+            src: "public/imgs/z6937842953610_b5a2118e6af45f67a99e1aabaac19f29.jpg",
+            caption: "Nụ cười ngọt ngào của em 😊"
+        },
+        {
+            src: "public/imgs/z6937842966677_1be05a7902586e49b9edbb9899962fbd.jpg",
+            caption: "Em đẹp từng khoảnh khắc 💫"
+        },
+        {
+            src: "public/imgs/z6937842971558_c812d0eddf66cf74bb0c7f1ea234704c.jpg",
+            caption: "Người bạn đặc biệt nhất 💕"
+        },
+        {
+            src: "public/imgs/z6937842972754_eade1e9abe54e4e8b7666e1e8b4444da.jpg",
+            caption: "Em tỏa sáng như ngôi sao 🌟"
+        },
+        {
+            src: "public/imgs/z6937842980773_01a0d0cf893d44b7c05b389af4bd96f1.jpg",
+            caption: "Khoảnh khắc tuyệt vời bên em 📸"
+        },
+        {
+            src: "public/imgs/z6937842984113_de14a4acae4c31aec92c67284871ba30.jpg",
+            caption: "Em xinh đẹp tự nhiên 🌸"
+        },
+        {
+            src: "public/imgs/z6937842988008_830d598b60c76fb5639a52ac1693dd20.jpg",
+            caption: "Ánh mắt trong trẻo của em 👁️"
+        },
+        {
+            src: "public/imgs/z6937842995348_647aa1a6ba14493e6766c7191c9d2cce.jpg",
+            caption: "Em đáng yêu như thiên thần 👼"
+        },
+        {
+            src: "public/imgs/z6937843002664_555eadc3d4f421da7289e2cc318513f6.jpg",
+            caption: "Nét đẹp thanh thoát của em 🦋"
+        },
+        {
+            src: "public/imgs/z6937843008211_f26e2c55050eb3c02dccab41dfa5e5b4.jpg",
+            caption: "Em rạng rỡ trong ánh nắng ☀️"
+        },
+        {
+            src: "public/imgs/z6937843010951_0c36bc332da1076eaa990f6d8ed85de7.jpg",
+            caption: "Khoảnh khắc đẹp nhất của em 💖"
+        },
+        {
+            src: "public/imgs/z6937843267505_b557a3b14cfe68199dfea9432a24c0ca.jpg",
+            caption: "Em mãi là người đặc biệt 💝"
+        }
     ],
+    
+    // Slideshow settings
+    SLIDESHOW_SETTINGS: {
+        autoPlay: true,
+        autoPlayInterval: 4000, // 4 seconds
+        showControls: true,
+        showDots: true,
+        showCaption: true
+    },
 
     // Messages
     MESSAGES: {

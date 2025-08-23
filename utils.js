@@ -132,6 +132,84 @@ const Utils = {
         setTimeout(() => {
             element.style.transform = '';
         }, duration);
+    },
+
+    // ================ SLIDESHOW HELPERS ================
+    createSlideshow: (images, container) => {
+        let currentIndex = 0;
+        let autoPlayInterval;
+
+        const imageElement = container.querySelector('#slideshow-image');
+        const captionElement = container.querySelector('#slideshow-caption');
+        const dotsContainer = container.querySelector('#slideshow-dots');
+        const prevBtn = container.querySelector('#prevBtn');
+        const nextBtn = container.querySelector('#nextBtn');
+
+        // Create dots
+        images.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = container.querySelectorAll('.dot');
+
+        const updateSlide = (index) => {
+            if (!images[index]) return;
+
+            imageElement.src = images[index].src;
+            captionElement.textContent = images[index].caption;
+
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+
+            currentIndex = index;
+        };
+
+        const goToSlide = (index) => {
+            updateSlide(index);
+        };
+
+        const nextSlide = () => {
+            const nextIndex = (currentIndex + 1) % images.length;
+            updateSlide(nextIndex);
+        };
+
+        const prevSlide = () => {
+            const prevIndex = (currentIndex - 1 + images.length) % images.length;
+            updateSlide(prevIndex);
+        };
+
+        const startAutoPlay = () => {
+            autoPlayInterval = setInterval(nextSlide, 4000);
+        };
+
+        const stopAutoPlay = () => {
+            clearInterval(autoPlayInterval);
+        };
+
+        // Event listeners
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-pause on hover
+        container.addEventListener('mouseenter', stopAutoPlay);
+        container.addEventListener('mouseleave', startAutoPlay);
+
+        // Start auto-play
+        startAutoPlay();
+
+        return {
+            goToSlide,
+            nextSlide,
+            prevSlide,
+            startAutoPlay,
+            stopAutoPlay
+        };
     }
 };
 

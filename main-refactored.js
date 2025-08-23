@@ -138,19 +138,15 @@ class WebsiteApp {
         }
     }
 
-    // ================ GALLERY ================
+    // ================ SLIDESHOW ================
     setupGallery() {
-        const galleryItems = this.utils.getElements('.photo-item');
-        galleryItems.forEach(item => {
-            item.addEventListener('click', (e) => {
-                const rect = item.getBoundingClientRect();
-                this.utils.createHeartBurst(
-                    rect.left + rect.width / 2,
-                    rect.top + rect.height / 2,
-                    3
-                );
-            });
-        });
+        const slideshowContainer = this.utils.getElement('.slideshow-container');
+        if (slideshowContainer) {
+            this.slideshow = this.utils.createSlideshow(
+                this.config.SLIDESHOW_IMAGES,
+                slideshowContainer
+            );
+        }
     }
 
     // ================ INTERACTIVE ELEMENTS ================

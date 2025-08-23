@@ -74,64 +74,19 @@
             <button id="nextQuote" class="quote-btn">💝 Lời ngọt ngào tiếp theo</button>
         </div>
 
-        <!-- Enhanced Gallery -->
-        <div class="gallery-container">
+        <!-- Photo Slideshow -->
+        <div class="slideshow-container">
             <h2 class="gallery-title">💖 Khoảnh khắc đẹp của em 💖</h2>
-            <div class="gallery">
-                <div class="photo-item" data-caption="Em xinh như thiên thần 👼">
-                    <img src="public/imgs/4.png" alt="Cẩm Giang 1">
-                    <div class="photo-overlay">
-                        <span class="photo-caption">Em xinh như thiên thần 👼</span>
-                    </div>
+            <div class="slideshow">
+                <div class="slide-wrapper">
+                    <img id="slideshow-image" src="public/imgs/9.jpg" alt="Cẩm Giang">
+                    <div class="slide-caption" id="slideshow-caption">Em xinh như thiên thần 👼</div>
                 </div>
-                <div class="photo-item" data-caption="Nụ cười tỏa nắng của em ☀️">
-                    <img src="public/imgs/5.png" alt="Cẩm Giang 2">
-                    <div class="photo-overlay">
-                        <span class="photo-caption">Nụ cười tỏa nắng của em ☀️</span>
-                    </div>
+                <div class="slideshow-controls">
+                    <button class="slide-btn prev-btn" id="prevBtn">❮</button>
+                    <button class="slide-btn next-btn" id="nextBtn">❯</button>
                 </div>
-                <div class="photo-item" data-caption="Em đẹp trong mọi khoảnh khắc 💫">
-                    <img src="public/imgs/6.jpg" alt="Cẩm Giang 3">
-                    <div class="photo-overlay">
-                        <span class="photo-caption">Em đẹp trong mọi khoảnh khắc 💫</span>
-                    </div>
-                </div>
-                <div class="photo-item" data-caption="Cô gái đặc biệt của anh thật dễ thương 🥰">
-                    <img src="public/imgs/7.jpg" alt="Cẩm Giang 4">
-                    <div class="photo-overlay">
-                        <span class="photo-caption">Cô gái đặc biệt của anh thật dễ thương 🥰</span>
-                    </div>
-                </div>
-                <div class="photo-item" data-caption="Em là điều tuyệt vời nhất ✨">
-                    <img src="public/imgs/9.jpg" alt="Cẩm Giang 5">
-                    <div class="photo-overlay">
-                        <span class="photo-caption">Em là điều tuyệt vời nhất ✨</span>
-                    </div>
-                </div>
-                <div class="photo-item" data-caption="Mãi mãi trân trọng em 💕">
-                    <img src="public/imgs/CG1.jpg" alt="Cẩm Giang 6">
-                    <div class="photo-overlay">
-                        <span class="photo-caption">Mãi mãi trân trọng em 💕</span>
-                    </div>
-                </div>
-                <div class="photo-item" data-caption="Em là tất cả của anh 💖">
-                    <img src="public/imgs/CG2.jpg" alt="Cẩm Giang 7">
-                    <div class="photo-overlay">
-                        <span class="photo-caption">Em là tất cả của anh 💖</span>
-                    </div>
-                </div>
-                <div class="photo-item" data-caption="Ấn tượng từ cái nhìn đầu tiên 💘">
-                    <img src="public/imgs/CG3.png" alt="Cẩm Giang 8">
-                    <div class="photo-overlay">
-                        <span class="photo-caption">Ấn tượng từ cái nhìn đầu tiên 💘</span>
-                    </div>
-                </div>
-                <div class="photo-item" data-caption="Đôi mắt em đẹp nhất thế gian 👀">
-                    <img src="public/imgs/background/đôi mắt ấy.jpg" alt="Cẩm Giang 9">
-                    <div class="photo-overlay">
-                        <span class="photo-caption">Đôi mắt em đẹp nhất thế gian 👀</span>
-                    </div>
-                </div>
+                <div class="slideshow-dots" id="slideshow-dots"></div>
             </div>
         </div>
 
