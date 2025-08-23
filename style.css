@@ -313,8 +313,8 @@ h1 {
     box-shadow: 0 2px 8px rgba(231, 84, 128, 0.07);
 }
 
-/* Photo Slideshow */
-.slideshow-container {
+/* Photo Gallery */
+.photo-gallery-container {
     margin: 30px 0;
     text-align: center;
 }
@@ -327,103 +327,41 @@ h1 {
     text-shadow: 2px 2px 4px rgba(231, 84, 128, 0.1);
 }
 
-.slideshow {
-    position: relative;
-    max-width: 600px;
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(231, 84, 128, 0.2);
-    background: #fff;
 }
 
-.slide-wrapper {
+.photo-item {
     position: relative;
-    width: 100%;
-    height: 400px;
+    aspect-ratio: 3/4;
+    border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(231, 84, 128, 0.15);
+    border: 2px solid #f8bbd0;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-#slideshow-image {
+.photo-item:hover {
+    transform: translateY(-5px);
+    border-color: #e75480;
+    box-shadow: 0 8px 25px rgba(231, 84, 128, 0.3);
+}
+
+.photo-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.5s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
-.slide-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    color: white;
-    padding: 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.slideshow-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.slide-btn {
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    color: #e75480;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    pointer-events: all;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.slide-btn:hover {
-    background: white;
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(231, 84, 128, 0.3);
-}
-
-.slideshow-dots {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    gap: 10px;
-    background: #fff8fc;
-    flex-wrap: wrap;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #f8bbd0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.dot:hover {
-    background: #e75480;
-    transform: scale(1.2);
-}
-
-.dot.active {
-    background: #e75480;
-    border-color: #fff;
-    box-shadow: 0 0 10px rgba(231, 84, 128, 0.5);
+.photo-item:hover img {
+    transform: scale(1.05);
 }
 
 /* Interactive Elements */
