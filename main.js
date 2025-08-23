@@ -48,7 +48,7 @@ const quotes = [
     "Mỗi ngày bên em đều là một món quà 🎁",
     "Em xinh đẹp nhất khi em cười 😊",
     "Em quan trọng với anh hơn tất cả những gì em có thể tưởng tượng 💕",
-    "Em là lý do anh tin vào tình bạn đẹp 💖",
+    "Em là lý do anh tin vào những điều tốt đẹp 💖",
     "Với anh, em là người bạn tuyệt vời nhất 🌍",
     "Em làm cuộc sống anh vui vẻ hơn 💓",
     "Anh mong được bên cạnh em như một người bạn tốt 🤗"
@@ -320,7 +320,7 @@ const niceMessages = [
     "Màu hồng pastel đẹp nhất khi em mặc! 💗👗",
     "Em là ánh sáng dẫn lối cho anh trong cuộc đời này! 🌟💫",
     "Trân trọng em nhiều hơn tất cả những ngôi sao trên trời! ⭐💕",
-    "Em là lý do anh tin vào tình bạn đích thực! 💘🌹",
+    "Em là lý do anh tin vào những điều tốt đẹp trong cuộc sống! 💘🌹",
     "Với anh, em là người bạn tuyệt vời nhất! 🌍💖"
 ];
 
