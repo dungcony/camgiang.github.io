@@ -138,14 +138,33 @@ class WebsiteApp {
         }
     }
 
-    // ================ SLIDESHOW ================
+    // ================ PHOTO GALLERY ================
     setupGallery() {
-        const slideshowContainer = this.utils.getElement('.slideshow-container');
-        if (slideshowContainer) {
-            this.slideshow = this.utils.createSlideshow(
-                this.config.SLIDESHOW_IMAGES,
-                slideshowContainer
-            );
+        const photoGrid = this.utils.getElement('#photo-grid');
+        if (photoGrid && this.config.GALLERY_IMAGES) {
+            this.config.GALLERY_IMAGES.forEach((imageSrc, index) => {
+                const photoItem = document.createElement('div');
+                photoItem.className = 'photo-item';
+
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.alt = `Cẩm Giang ${index + 1}`;
+                img.loading = 'lazy'; // Lazy loading for better performance
+
+                photoItem.appendChild(img);
+
+                // Add click effect
+                photoItem.addEventListener('click', () => {
+                    const rect = photoItem.getBoundingClientRect();
+                    this.utils.createHeartBurst(
+                        rect.left + rect.width / 2,
+                        rect.top + rect.height / 2,
+                        3
+                    );
+                });
+
+                photoGrid.appendChild(photoItem);
+            });
         }
     }
 
