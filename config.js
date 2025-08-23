@@ -19,23 +19,23 @@ const WEBSITE_CONFIG = {
         "Em xinh đẹp nhất khi em cười 😊",
         "Em quan trọng với anh hơn tất cả những gì em có thể tưởng tượng 💕",
         "Em là lý do anh tin vào những điều tốt đẹp 💖",
-        "Với anh, em là người bạn tuyệt vời nhất 🌍",
+        "Với anh, em là người tuyệt vời nhất 🌍",
         "Em làm cuộc sống anh vui vẻ hơn 💓",
-        "Anh mong được bên cạnh em như một người bạn tốt 🤗"
+        "Anh mong được bên cạnh em như một người tốt 🤗"
     ],
 
     // Messages cho generator
     NICE_MESSAGES: [
         "Em xinh đẹp như một thiên thần từ thiên đường! 👼✨",
         "Nụ cười của em làm cả thế giới này trở nên tươi sáng! 🌟😊",
-        "Em là người bạn tuyệt vời nhất mà cuộc đời tặng cho anh! 🎁💕",
+        "Em là người tuyệt vời nhất mà cuộc đời tặng cho anh! 🎁💕",
         "Mỗi ngày bên em đều là một ngày vui vẻ nhất! 🌈💖",
         "Em chơi PUBG giỏi quá, anh thán phục em lắm! 🎮🏆",
         "Màu hồng pastel đẹp nhất khi em mặc! 💗👗",
         "Em là ánh sáng dẫn lối cho anh trong cuộc đời này! 🌟💫",
         "Trân trọng em nhiều hơn tất cả những ngôi sao trên trời! ⭐💕",
         "Em là lý do anh tin vào những điều tốt đẹp trong cuộc sống! 💘🌹",
-        "Với anh, em là người bạn tuyệt vời nhất! 🌍💖"
+        "Với anh, em là người tuyệt vời nhất! 🌍💖"
     ],
 
     // Timeline events
@@ -46,11 +46,6 @@ const WEBSITE_CONFIG = {
             content: "Ngày đầu tiên anh nhìn thấy em, anh đã biết em là người đặc biệt. Nụ cười của em đã làm tan chảy trái tim anh ngay lập tức."
         },
         {
-            date: "💘 Ngày Trở Thành Bạn Thân",
-            title: "Chúng ta trở thành bạn thân",
-            content: "Ngày anh và em chính thức trở thành những người bạn thân thiết. Đây là ngày đáng nhớ nhất!"
-        },
-        {
             date: "🎮 Chơi Game Cùng",
             title: "PUBG Partners",
             content: "Những buổi tối chúng ta cùng nhau \"ăn gà\" trong PUBG. Em chơi giỏi lắm, anh rất tự hào về em!"
@@ -58,7 +53,7 @@ const WEBSITE_CONFIG = {
         {
             date: "💝 Hiện Tại",
             title: "Trân trọng em mỗi ngày",
-            content: "Mỗi ngày trôi qua, anh lại trân trọng tình bạn với em nhiều hơn. Em là người bạn tuyệt vời nhất mà anh có."
+            content: "Mỗi ngày trôi qua, anh lại trân trọng tình với em nhiều hơn. Em là người tuyệt vời nhất mà anh có."
         }
     ],
 
@@ -66,7 +61,7 @@ const WEBSITE_CONFIG = {
     SECRET_LETTERS: [
         {
             title: "💖 Thư chúc số 1",
-            content: "Cẩm Giang thân mến, từ ngày đầu tiên gặp em, anh đã biết rằng em chính là người bạn tuyệt vời mà anh đã tìm kiếm. Em xinh đẹp, dễ thương và ngoan hiền đến mức làm anh cảm thấy vui vẻ mỗi khi gặp em."
+            content: "Cẩm Giang thân mến, từ ngày đầu tiên gặp em, anh đã biết rằng em chính là người tuyệt vời mà anh đã tìm kiếm. Em xinh đẹp, dễ thương và ngoan hiền đến mức làm anh cảm thấy vui vẻ mỗi khi gặp em."
         },
         {
             title: "💕 Thư chúc số 2",
@@ -82,7 +77,7 @@ const WEBSITE_CONFIG = {
         },
         {
             title: "💝 Thư chúc số 5",
-            content: "Em là cô gái đặc biệt của anh, là điều tuyệt vời nhất đã đến với cuộc đời anh. Anh hứa sẽ luôn trân trọng tình bạn này và mong em luôn hạnh phúc. Chúc em tất cả những điều tốt đẹp nhất! 💖"
+            content: "Em là cô gái đặc biệt của anh, là điều tuyệt vời nhất đã đến với cuộc đời anh. Anh hứa sẽ luôn trân trọng tình này và mong em luôn hạnh phúc. Chúc em tất cả những điều tốt đẹp nhất! 💖"
         }
     ],
 
@@ -114,9 +109,9 @@ const WEBSITE_CONFIG = {
 
     // Messages
     MESSAGES: {
-        SUCCESS_CONTACT: "💌 Gửi lời chúc thành công! Cảm ơn bạn đã nhắn tin cho Cẩm Giang! 💕",
+        SUCCESS_CONTACT: "💌 Gửi lời chúc thành công! Cảm ơn đã nhắn tin cho Cẩm Giang! 💕",
         LOADING_TEXT: "Đang tải tình cảm... 💕",
-        LETTER_SIGNATURE: "💌 Từ người bạn thân nhất 💌",
+        LETTER_SIGNATURE: "💌 Từ người thân nhất 💌",
         HEART_BUTTON_TEXT: "💖 Click để gửi tình cảm 💖"
     }
 };
