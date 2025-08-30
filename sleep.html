@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đi ngủ cùng Cẩm Giang 💤</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Floating stars background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .sleep-button {
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+            border: none;
+            padding: 20px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            font-family: 'Pacifico', cursive;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sleep-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .sleep-button:active {
+            transform: translateY(0);
+        }
+
+        .sleep-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .sleep-button:hover::before {
+            left: 100%;
+        }
+
+        .sleep-scene {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('public/imgs/sleep.jpg') center center/cover no-repeat;
+            z-index: 5;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+
+        .sleep-scene.active {
+            opacity: 1;
+        }
+
+        .sleep-text {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Dancing Script', cursive;
+            font-size: 36px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            white-space: nowrap;
+            animation: textSlide 15s linear infinite;
+            z-index: 15;
+        }
+
+        @keyframes textSlide {
+            0% { transform: translateX(-100vw); }
+            100% { transform: translateX(100vw); }
+        }
+
+        .moon {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #fff 30%, #f0f0f0 70%);
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(255,255,255,0.8);
+            animation: moonGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes moonGlow {
+            0%, 100% { box-shadow: 0 0 30px rgba(255,255,255,0.8); }
+            50% { box-shadow: 0 0 50px rgba(255,255,255,1); }
+        }
+
+        .clouds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 6;
+        }
+
+        .cloud {
+            position: absolute;
+            background: rgba(255,255,255,0.8);
+            border-radius: 50px;
+            opacity: 0.7;
+            animation: float 20s linear infinite;
+        }
+
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background: rgba(255,255,255,0.8);
+            border-radius: 50%;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(calc(100vw + 100px)); }
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            z-index: 20;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+
+        .sleeping-pig {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 48px;
+            animation: pigSleep 3s ease-in-out infinite;
+            z-index: 15;
+        }
+
+        @keyframes pigSleep {
+            0%, 100% { transform: translateX(-50%) rotate(0deg); }
+            25% { transform: translateX(-50%) rotate(-5deg); }
+            75% { transform: translateX(-50%) rotate(5deg); }
+        }
+
+        .zzz {
+            position: absolute;
+            top: -30px;
+            right: -20px;
+            font-size: 24px;
+            color: #fff;
+            animation: zzzFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes zzzFloat {
+            0%, 100% { opacity: 0; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(-10px); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating stars -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Navigation -->
+    <a href="index.html" class="back-button">🏠 Về trang chủ</a>
+
+    <div class="container">
+        <button class="sleep-button" id="sleepButton">
+            💤 Đi ngủ cùng em 💤
+        </button>
+    </div>
+
+    <!-- Sleep scene -->
+    <div class="sleep-scene" id="sleepScene">
+        <div class="moon"></div>
+        <div class="clouds" id="clouds"></div>
+        <div class="sleeping-pig">
+            🐷
+            <div class="zzz">💤</div>
+        </div>
+        <div class="sleep-text" id="sleepText">Con lợn đang ngủ ngon lành... 💤</div>
+    </div>
+
+    <script>
+        // Create floating stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Create floating clouds
+        function createClouds() {
+            const cloudsContainer = document.getElementById('clouds');
+            for (let i = 0; i < 5; i++) {
+                const cloud = document.createElement('div');
+                cloud.className = 'cloud';
+                cloud.style.top = Math.random() * 200 + 'px';
+                cloud.style.width = (Math.random() * 100 + 50) + 'px';
+                cloud.style.height = (Math.random() * 30 + 20) + 'px';
+                cloud.style.animationDelay = Math.random() * 20 + 's';
+                cloud.style.animationDuration = (Math.random() * 10 + 20) + 's';
+                
+                // Create cloud shape
+                cloud.style.left = '-100px';
+                cloudsContainer.appendChild(cloud);
+            }
+        }
+
+        // Sleep button functionality
+        document.getElementById('sleepButton').addEventListener('click', function() {
+            const sleepScene = document.getElementById('sleepScene');
+            const sleepButton = document.getElementById('sleepButton');
+            
+            // Hide button
+            sleepButton.style.display = 'none';
+            
+            // Show sleep scene
+            sleepScene.style.display = 'block';
+            setTimeout(() => {
+                sleepScene.classList.add('active');
+            }, 100);
+
+            // Create clouds after scene is shown
+            setTimeout(() => {
+                createClouds();
+            }, 2000);
+        });
+
+        // Initialize stars on page load
+        window.addEventListener('load', function() {
+            createStars();
+        });
+
+        // Add some interactive effects
+        document.addEventListener('mousemove', function(e) {
+            const stars = document.querySelectorAll('.star');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            stars.forEach((star, index) => {
+                const speed = (index % 3 + 1) * 0.5;
+                star.style.transform = `translate(${mouseX * speed}px, ${mouseY * speed}px)`;
+            });
+        });
+    </script>
+</body>
+
+</html>
