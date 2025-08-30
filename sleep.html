@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đi ngủ cùng Cẩm Giang 💤</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,7 +19,7 @@
             font-family: 'Quicksand', Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden;
             position: relative;
         }
 
@@ -42,8 +44,17 @@
         }
 
         @keyframes twinkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.5); }
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
         }
 
         .container {
@@ -66,7 +77,7 @@
             color: white;
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             margin-bottom: 30px;
             font-family: 'Pacifico', cursive;
@@ -76,7 +87,7 @@
 
         .sleep-button:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
         }
 
         .sleep-button:active {
@@ -90,7 +101,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.5s;
         }
 
@@ -117,21 +128,28 @@
 
         .sleep-text {
             position: absolute;
-            bottom: 100px;
+            bottom: 120px;
             left: 50%;
             transform: translateX(-50%);
             font-family: 'Dancing Script', cursive;
-            font-size: 36px;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            font-size: 48px;
+            color: #e6d7ff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 0 0 20px rgba(230, 215, 255, 0.5);
             white-space: nowrap;
             animation: textSlide 15s linear infinite;
             z-index: 15;
+            text-align: center;
+            font-weight: bold;
         }
 
         @keyframes textSlide {
-            0% { transform: translateX(-100vw); }
-            100% { transform: translateX(100vw); }
+            0% {
+                transform: translateX(-100vw);
+            }
+
+            100% {
+                transform: translateX(100vw);
+            }
         }
 
         .moon {
@@ -142,13 +160,20 @@
             height: 80px;
             background: radial-gradient(circle, #fff 30%, #f0f0f0 70%);
             border-radius: 50%;
-            box-shadow: 0 0 30px rgba(255,255,255,0.8);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
             animation: moonGlow 4s ease-in-out infinite;
         }
 
         @keyframes moonGlow {
-            0%, 100% { box-shadow: 0 0 30px rgba(255,255,255,0.8); }
-            50% { box-shadow: 0 0 50px rgba(255,255,255,1); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+
+            50% {
+                box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+            }
         }
 
         .clouds {
@@ -163,7 +188,7 @@
 
         .cloud {
             position: absolute;
-            background: rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 50px;
             opacity: 0.7;
             animation: float 20s linear infinite;
@@ -173,21 +198,26 @@
         .cloud::after {
             content: '';
             position: absolute;
-            background: rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 50%;
         }
 
         @keyframes float {
-            0% { transform: translateX(-100px); }
-            100% { transform: translateX(calc(100vw + 100px)); }
+            0% {
+                transform: translateX(-100px);
+            }
+
+            100% {
+                transform: translateX(calc(100vw + 100px));
+            }
         }
 
         .back-button {
             position: fixed;
             top: 20px;
             left: 20px;
-            background: rgba(255,255,255,0.2);
-            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             color: white;
             padding: 10px 20px;
             border-radius: 25px;
@@ -199,13 +229,13 @@
         }
 
         .back-button:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
             transform: scale(1.05);
         }
 
         .sleeping-pig {
             position: absolute;
-            bottom: 50px;
+            bottom: 60px;
             left: 50%;
             transform: translateX(-50%);
             font-size: 48px;
@@ -214,9 +244,19 @@
         }
 
         @keyframes pigSleep {
-            0%, 100% { transform: translateX(-50%) rotate(0deg); }
-            25% { transform: translateX(-50%) rotate(-5deg); }
-            75% { transform: translateX(-50%) rotate(5deg); }
+
+            0%,
+            100% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            25% {
+                transform: translateX(-50%) rotate(-5deg);
+            }
+
+            75% {
+                transform: translateX(-50%) rotate(5deg);
+            }
         }
 
         .zzz {
@@ -229,13 +269,146 @@
         }
 
         @keyframes zzzFloat {
-            0%, 100% { opacity: 0; transform: translateY(0); }
-            50% { opacity: 1; transform: translateY(-10px); }
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Thêm hiệu ứng bướm */
+        .butterflies {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 7;
+        }
+
+        .butterfly {
+            position: absolute;
+            font-size: 20px;
+            animation: butterflyFly 10s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes butterflyFly {
+            0% {
+                transform: translateX(-50px) translateY(0px) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+            }
+
+            90% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateX(calc(100vw + 50px)) translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .sleep-button {
+                font-size: 20px;
+                padding: 15px 30px;
+            }
+
+            .sleep-text {
+                font-size: 36px;
+                bottom: 100px;
+            }
+
+            .sleeping-pig {
+                font-size: 36px;
+                bottom: 50px;
+            }
+
+            .moon {
+                width: 60px;
+                height: 60px;
+                top: 30px;
+                right: 30px;
+            }
+
+            .back-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sleep-text {
+                font-size: 28px;
+                bottom: 80px;
+            }
+
+            .sleeping-pig {
+                font-size: 32px;
+                bottom: 40px;
+            }
+        }
+
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-text {
+            color: white;
+            font-size: 24px;
+            font-family: 'Pacifico', cursive;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.7;
+            }
+
+            50% {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 
 <body>
+    <!-- Loading screen -->
+    <div class="loading" id="loading">
+        <div class="loading-text">💤 Đang chuẩn bị giấc ngủ...</div>
+    </div>
+
     <!-- Floating stars -->
     <div class="stars" id="stars"></div>
 
@@ -252,18 +425,29 @@
     <div class="sleep-scene" id="sleepScene">
         <div class="moon"></div>
         <div class="clouds" id="clouds"></div>
+        <div class="butterflies" id="butterflies"></div>
         <div class="sleeping-pig">
             🐷
             <div class="zzz">💤</div>
         </div>
-        <div class="sleep-text" id="sleepText">Con lợn đang ngủ ngon lành... 💤</div>
+        <div class="sleep-text" id="sleepText">Con lợn đang ngủ ngon lành... 💤💤</div>
     </div>
 
     <script>
+        // Hide loading screen after page loads
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                document.getElementById('loading').classList.add('fade-out');
+                setTimeout(() => {
+                    document.getElementById('loading').style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
         // Create floating stars
         function createStars() {
             const starsContainer = document.getElementById('stars');
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 150; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 star.style.left = Math.random() * 100 + '%';
@@ -277,56 +461,83 @@
         // Create floating clouds
         function createClouds() {
             const cloudsContainer = document.getElementById('clouds');
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 8; i++) {
                 const cloud = document.createElement('div');
                 cloud.className = 'cloud';
-                cloud.style.top = Math.random() * 200 + 'px';
-                cloud.style.width = (Math.random() * 100 + 50) + 'px';
-                cloud.style.height = (Math.random() * 30 + 20) + 'px';
+                cloud.style.top = Math.random() * 300 + 'px';
+                cloud.style.width = (Math.random() * 120 + 60) + 'px';
+                cloud.style.height = (Math.random() * 40 + 25) + 'px';
                 cloud.style.animationDelay = Math.random() * 20 + 's';
-                cloud.style.animationDuration = (Math.random() * 10 + 20) + 's';
-                
-                // Create cloud shape
+                cloud.style.animationDuration = (Math.random() * 15 + 25) + 's';
                 cloud.style.left = '-100px';
                 cloudsContainer.appendChild(cloud);
             }
         }
 
+        // Create floating butterflies
+        function createButterflies() {
+            const butterfliesContainer = document.getElementById('butterflies');
+            const butterflyEmojis = ['🦋', '🦋', '🦋'];
+
+            for (let i = 0; i < 6; i++) {
+                const butterfly = document.createElement('div');
+                butterfly.className = 'butterfly';
+                butterfly.textContent = butterflyEmojis[Math.floor(Math.random() * butterflyEmojis.length)];
+                butterfly.style.top = Math.random() * 400 + 'px';
+                butterfly.style.animationDelay = Math.random() * 10 + 's';
+                butterfly.style.animationDuration = (Math.random() * 5 + 8) + 's';
+                butterfliesContainer.appendChild(butterfly);
+            }
+        }
+
         // Sleep button functionality
-        document.getElementById('sleepButton').addEventListener('click', function() {
+        document.getElementById('sleepButton').addEventListener('click', function () {
             const sleepScene = document.getElementById('sleepScene');
             const sleepButton = document.getElementById('sleepButton');
-            
-            // Hide button
-            sleepButton.style.display = 'none';
-            
+
+            // Hide button with animation
+            sleepButton.style.transform = 'scale(0)';
+            sleepButton.style.opacity = '0';
+            setTimeout(() => {
+                sleepButton.style.display = 'none';
+            }, 300);
+
             // Show sleep scene
             sleepScene.style.display = 'block';
             setTimeout(() => {
                 sleepScene.classList.add('active');
             }, 100);
 
-            // Create clouds after scene is shown
+            // Create effects after scene is shown
             setTimeout(() => {
                 createClouds();
+                createButterflies();
             }, 2000);
         });
 
         // Initialize stars on page load
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             createStars();
         });
 
-        // Add some interactive effects
-        document.addEventListener('mousemove', function(e) {
+        // Add interactive effects
+        document.addEventListener('mousemove', function (e) {
             const stars = document.querySelectorAll('.star');
             const mouseX = e.clientX / window.innerWidth;
             const mouseY = e.clientY / window.innerHeight;
-            
+
             stars.forEach((star, index) => {
-                const speed = (index % 3 + 1) * 0.5;
+                const speed = (index % 3 + 1) * 0.3;
                 star.style.transform = `translate(${mouseX * speed}px, ${mouseY * speed}px)`;
             });
+        });
+
+        // Add keyboard support
+        document.addEventListener('keydown', function (e) {
+            if (e.code === 'Space' || e.code === 'Enter') {
+                e.preventDefault();
+                document.getElementById('sleepButton').click();
+            }
         });
     </script>
 </body>
