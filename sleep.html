@@ -116,10 +116,58 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('public/imgs/sleep.jpg') center center/cover no-repeat;
+            background: #000000;
             z-index: 5;
             opacity: 0;
             transition: opacity 2s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sleep-scene::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('public/imgs/sleep.jpg') center center/contain no-repeat;
+            z-index: -1;
+            background-color: #000000;
+        }
+
+        /* Alternative approach for better image display */
+        .sleep-image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: -1;
+        }
+
+        .sleep-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+            width: auto;
+            height: auto;
+        }
+
+        /* Ensure image loads properly */
+        .sleep-image-container img {
+            opacity: 1;
+            transition: opacity 1s ease;
+        }
+
+        .sleep-scene.active .sleep-image-container img {
+            opacity: 1;
         }
 
         .sleep-scene.active {
@@ -423,6 +471,9 @@
 
     <!-- Sleep scene -->
     <div class="sleep-scene" id="sleepScene">
+        <div class="sleep-image-container">
+            <img src="public/imgs/sleep.jpg" alt="Sleep" class="sleep-image">
+        </div>
         <div class="moon"></div>
         <div class="clouds" id="clouds"></div>
         <div class="butterflies" id="butterflies"></div>
